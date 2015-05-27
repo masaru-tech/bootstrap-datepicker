@@ -796,7 +796,10 @@
 				this.viewDate = new Date(this.o.endDate);
 			else
 				this.viewDate = this.o.defaultViewDate;
-
+				
+			if (isNaN(this.viewDate))
+				this.viewDate = this.o.defaultViewDate;
+			
 			if (fromArgs){
 				// setting date by clicking
 				this.setValue();
